@@ -47,6 +47,64 @@ table {
 	border-spacing: 0;
 }
 
+
+
 /* END OF CSS RESET */
 
 
+
+main {
+	width:1010px;
+	padding:5px;/*1000px*/
+	margin:auto;
+	margin-top:10px;
+	background-color:#e0e0e0;
+	font-family:'Roboto';
+}
+
+a {
+	text-decoration:none;
+}
+
+a:visited {
+	text-decoration:none;
+}
+
+h1 {
+	font-size:75px;
+	font-weight:bold;
+	text-shadow:1px 1px 0px #82b1ff;
+	text-align:center;
+	color:black;
+}
+
+h2 {
+	color:#64b5f6;
+	font-size:45px;
+	text-align:center;
+}
+
+ul {
+	margin:auto;
+	font-size:0px;
+	margin-bottom:5px;
+}
+
+#nav li {
+	font-size:20px;
+	font-style:italic;
+	display:inline-block;
+	width:168.3px;
+	text-align:center;
+	color:black;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+#nav li:hover {
+	background-color:#82b1ff;
+}
+
+p {
+	font-size:15px;
+}
