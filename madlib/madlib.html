@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+		<title>Adventure Mad Lib</title>
+
+		<style>
+
+			/* http://meyerweb.com/eric/tools/css/reset/ 
+			   v2.0 | 20110126
+			   License: none (public domain)
+			*/
+
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+
+
+
+			/*CSS RESET END*/
+
+
+			body {
+				font-family: cursive;
+				font-size:25px;
+				padding-left:25px;
+				padding-right:25px;
+			}
+			
+			body h1 {
+				font-family: 'Coiny';
+				text-align:center;
+				font-size:100px;
+				text-shadow:2px 2px 1px;
+			}
+
+			body div {
+				display:inline-block;
+			}
+
+			h2 {
+				font-size:50px;
+				text-align:center;
+				font-weight:bold;
+			}
+
+
+		</style>
+
+
+
+
+		<script>
+
+			function madLib() {
+
+				var vman1 = document.getElementById("man1").value;
+				var vtitlepre = "'s Bizarre Adventure"
+				var vtitle = vman1.concat(vtitlepre);
+				document.getElementById("title").innerHTML = vtitle;
+				document.getElementById("story1").innerHTML = "Once upon a time, there was a hero named";
+				document.getElementById("dman1").innerHTML = vman1;
+				//Using escape characters to allow the quotation marks
+				document.getElementById("story2").innerHTML = "who went on many \"bizarre\" adventures.";
+				document.getElementById("story3").innerHTML = "His adventure backpack had the letter";
+				//using charAt() to find the character's initial
+				var vmaninitial = vman1.charAt(0);
+				document.getElementById("maninitial").innerHTML = vmaninitial;
+				document.getElementById("story4").innerHTML = "on it \(his initial\). However, he soon realized his";
+				var vadjective1 = document.getElementById("adjective1").value;
+				document.getElementById("dadjective1").innerHTML = vadjective1;
+				document.getElementById("story5").innerHTML = "backpack had been stolen from his back! That was where he kept all the loot from his many adventures! \"Who the";
+				var vexclamation = document.getElementById("exclamation").value;
+				document.getElementById("dexclamation").innerHTML = vexclamation;
+				document.getElementById("story6").innerHTML = "took my backpack??\" he shouted. \"That word! and";;
+				var example = "Who the heck took my backpack??";
+				//Using indexOf() to find how many characters in the exclamation is
+				var vindexof = example.indexOf("heck") + 1;
+				document.getElementById("indexof").innerHTML = vindexof;
+				document.getElementById("story7").innerHTML = "characters into your sentence too! Might you be the";
+				document.getElementById("dman1.1").innerHTML = vman1;
+				document.getElementById("story8").innerHTML = "foretold in the prophecy?\" someone said.";
+				document.getElementById("dman1.2").innerHTML = vman1;
+				document.getElementById("story9").innerHTML = "turned around to see a very";
+				var vadjective2 = document.getElementById("adjective2").value;
+				document.getElementById("dadjective2").innerHTML = vadjective2;
+				document.getElementById("story10").innerHTML = "man standing there. \"Prophecy? What do you mean?\" \"That doesn't matter right now. What does matter is that I know where that guy went with your backpack. He went to";
+				var vlocation1 = document.getElementById("location1").value;
+				document.getElementById("dlocation1").innerHTML = vlocation1;
+				document.getElementById("story11").innerHTML = "!\" And so they both set off to retrieve the backpack. \"Welcome to"
+				//using substr() to make the character mess up their pronunciation
+				var vlocation2 = vlocation1.substr(1);
+				document.getElementById("dlocation2").innerHTML = vlocation2;
+				document.getElementById("story12").innerHTML = "mortals\" said"
+				var vman2 = document.getElementById("man2").value;
+				document.getElementById("dman2").innerHTML = vman2;
+				document.getElementById("story13").innerHTML = ". \""
+				document.getElementById("dlocation2.1").innerHTML = vlocation2;
+				document.getElementById("story14").innerHTML = "? I thought we were in"
+				document.getElementById("dlocation1.1").innerHTML = vlocation1;
+				document.getElementById("story15").innerHTML = "\" said"
+				document.getElementById("dman1.3").innerHTML = vman1;
+				document.getElementById("story16").innerHTML = ". \"Do not make fun of my mistake!!! Now you will face the ability that I call"
+				//using toUpperCase to make the ability name
+				var vability1pre = document.getElementById("ability1").value.toUpperCase();
+				var leftbracket = "\["
+				var rightbracket = "\]"
+				//Using concat() to create the ability name
+				var vability1pre2 = leftbracket.concat(vability1pre);
+				var vability1 = vability1pre2.concat(rightbracket);
+				document.getElementById("dability1").innerHTML = vability1;
+				document.getElementById("story17").innerHTML = "! \"Don't get close to him,"
+				document.getElementById("dman1.4").innerHTML = vman1;
+				document.getElementById("story18").innerHTML = "! I've never seen such a powerful ability like this one!"
+				document.getElementById("story19").innerHTML = "You have to use your own ability to stop him!\" \"My own ability? I didn't even know I have an ability, so how do you expect me to do that?\" \"Look, back then if you had said something like"
+				//using replace() to replace the exclamation
+				var vreplace = example.replace(vexclamation, "crap");
+				document.getElementById("replace").innerHTML = "'" + vreplace + "'";
+				document.getElementById("story20").innerHTML = "I would have just walked on by, but you used the word"
+				document.getElementById("dexclamation.1").innerHTML = vexclamation;
+				document.getElementById("story21").innerHTML = "!";
+				document.getElementById("story22").innerHTML = "That is what the hero in the prophecy said! That hero must use his own ability to stop a great evil!";
+				document.getElementById("story23").innerHTML = "I believe you can do it! Anyways, Cya later alligator!\" The";
+				document.getElementById("dadjective2.1").innerHTML = vadjective2;
+				document.getElementById("story24").innerHTML = "man then ran away. It seemed that all hope was lost, but the man running away suddenly gave";
+				document.getElementById("dman1.5").innerHTML = vman1;
+				document.getElementById("story25").innerHTML = "an idea. \"What if my power has to do with speed?\" he thought. It was true! He named the ability";
+				var vability2pre = document.getElementById("ability2").value.toUpperCase();
+				var vability2pre2 = leftbracket.concat(vability2pre);
+				var vability2 = vability2pre2.concat(rightbracket);
+				document.getElementById("dability2").innerHTML = vability2;
+				document.getElementById("story26").innerHTML = "."
+				document.getElementById("story27").innerHTML = "He then activated his ability, snatched the backpack from"
+				document.getElementById("dman2.1").innerHTML = vman2;
+				document.getElementById("story28").innerHTML = ","
+				document.getElementById("story29").innerHTML = "and ran as many kilometers as there are letters in the word '"
+				document.getElementById("dexclamation.2").innerHTML = vexclamation;
+				document.getElementById("story30").innerHTML = "' ("
+				//using .length to get the length of the exclamation
+				var vlength = vexclamation.length;
+				document.getElementById("length").innerHTML = vlength;
+				document.getElementById("story31").innerHTML = "of them). He then went home and did some math."
+				document.getElementById("length.1").innerHTML = vlength;
+				document.getElementById("story32").innerHTML = "(the kilometers) square rooted, multiplied by Pi, divided by Euler's number, turned into an absolute value, and rounded got him"
+				//Using math and number functions to calculate a random meaningless number
+				var math1 = Math.sqrt(vlength);
+				var math2 = math1 * Math.PI;
+				var math3 = math2 / Math.E;
+				var math4 = Math.abs(math3);
+				var math5 = Math.round(math4);
+				document.getElementById("result").innerHTML = math5;
+				document.getElementById("story33").innerHTML = "."
+				document.getElementById("story34").innerHTML = "He knew he did this for no reason but he wanted to at least feel like he did something other than retrieve his own backpack that day. He then took a very long nap."
+			}
+
+		</script>
+
+
+
+
+	</head>
+
+
+	<body>
+
+	<div id="delete">
+
+		<h1>Adventure Story!!</h1> <br>
+
+		<form>
+
+			Man 1:					<input type="text" id="man1" value="Sonic"/> <br>
+			Adjective 1:			<input type="text" id="adjective1" value="heavy"/> <br>
+			Silly exclamation:		<input type="text" id="exclamation" value="heck"/> <br>
+			Adjective 2:			<input type="text" id="adjective2" value="wacky"/> <br>
+			Location 1:				<input type="text" id="location1" value="Brooklyn"/> <br>
+			Man 2:					<input type="text" id="man2" value="Scrappy Doo"/> <br>
+			Silly Ability Name 1:	<input type="text" id="ability1" value="Puppy Power"/> <br>
+			Silly Ability Name 2:	<input type="text" id="ability2" value="Gotta Go Fast"/> <br>
+
+			<input type=button onclick="madLib()" id="submit" value="Submit"/>
+
+		</form>
+
+	</div>
+
+	<h2 id="title"></h2>
+	<br>
+	<div id="story1"></div>
+	<div id="dman1"></div>
+	<div id="story2"></div>
+	<div id="story3"></div>
+	<div id="maninitial"></div>
+	<div id="story4"></div>
+	<div id="dadjective1"></div>
+	<div id="story5"></div>
+	<div id="dexclamation"></div>
+	<div id="story6"></div>
+	<div id="indexof"></div>
+	<div id="story7"></div>
+	<div id="dman1.1"></div>
+	<div id="story8"></div>
+	<div id="dman1.2"></div>
+	<div id="story9"></div>
+	<div id="dadjective2"></div>
+	<div id="story10"></div>
+	<div id="dlocation1"></div><div id="story11"></div>
+	<div id="dlocation2"></div>
+	<div id="story12"></div>
+	<div id="dman2"></div><div id="story13"></div><div id="dlocation2.1"></div><div id="story14"></div>
+	<div id="dlocation1.1"></div><div id="story15"></div>
+	<div id="dman1.3"></div><div id="story16"></div><div id="dability1"></div><div id="story17"></div>
+	<div id="dman1.4"></div><div id="story18"></div>
+	<div id="story19"></div><div id="replace"></div>
+	<div id="story20"></div>
+	<div id="dexclamation.1"></div><div id="story21"></div>
+	<div id="story22"></div>
+	<div id="story23"></div>
+	<div id="dadjective2.1"></div>
+	<div id="story24"></div>
+	<div id="dman1.5"></div>
+	<div id="story25"></div>
+	<div id="dability2"></div><div id="story26"></div>
+	<div id="story27"></div>
+	<div id="dman2.1"></div><div id="story28"></div>
+	<div id="story29"></div><div id="dexclamation.2"></div><div id="story30"></div><div id="length"></div>
+	<div id="story31"></div>
+	<div id="length.1"></div>
+	<div id="story32"></div>
+	<div id="result"></div><div id="story33"></div>
+	<div id="story34"></div>
+
+	</body>
+
+</html>
