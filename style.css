@@ -107,12 +107,19 @@ h2 {
 	background-color:#82b1ff;
 }
 
-#examples  {
-	width:200px;
+#examples {
+	width:600px;
 	margin:auto;
 }
 
-#examples img:hover {
+#examples td {
+	width:200px;
+	padding-left:25px;
+	padding-right:25px;
+	padding-top:15px;
+}
+
+#examples td:hover {
 	background-color:#bbdefb;
 }
 
@@ -128,6 +135,9 @@ h2 {
 }
 
 p {
+	padding-top:5px;
 	padding-bottom:5px;
 	text-align:center;
+	font-weight:bold;
+	color:black;
 }
