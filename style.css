@@ -54,8 +54,7 @@ table {
 
 
 main {
-	width:1010px;
-	padding:5px;/*1000px*/
+	width:1000px;
 	margin:auto;
 	background-color:#e0e0e0;
 	font-family:'Roboto';
@@ -93,9 +92,8 @@ h2 {
 
 #nav li {
 	font-size:20px;
-	font-style:italic;
 	display:inline-block;
-	width:168.3px;
+	width:166.6px;
 	text-align:center;
 	color:black;
 	padding-top:5px;
