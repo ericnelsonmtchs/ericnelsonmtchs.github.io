@@ -60,7 +60,7 @@ body {
 main {
 	width:1000px;
 	margin:auto;
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Bitter', serif;
 	font-size:15px;
 }
 
@@ -75,7 +75,6 @@ a:visited {
 h1 {
 	font-size:75px;
 	font-weight:bold;
-	text-shadow:1px 1px 0px #82b1ff;
 	text-align:center;
 	color:black;
 }
