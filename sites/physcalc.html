@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html>
+<meta charset="UTF-8">
+
+<head>
+
+	<title>Physics Calculator</title>
+	<style>
+	body {
+		font-family:'Calibri';
+	}
+	td {
+		width:100px;
+	}
+	</style>
+
+</head>
+
+<body>
+	<h1>Physics Calculator</h1>
+	<canvas width="500" height="100" style="border:solid 1px black" id="myCanvas">
+		<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+
+		function calcSpeed(a,b){
+			ctx.beginPath();
+			ctx.clearRect(0,0,600,400);
+			ctx.closePath();
+			var speed = parseFloat(a) / parseFloat(b) + " m/s";
+			ctx.beginPath();
+			ctx.font="50px 'Calibri'"
+			ctx.fillText(speed,25,70);
+			ctx.closePath();
+		}
+
+		function calcAcceleration(a,b,c){
+			ctx.beginPath();
+			ctx.clearRect(0,0,600,400);
+			ctx.closePath();
+			var acceleration = ( parseFloat(a) - parseFloat(b) ) / parseFloat(c) + " m/s²";
+			ctx.beginPath();
+			ctx.font="50px 'Calibri'"
+			ctx.fillText(acceleration,25,70);
+			ctx.closePath();
+		}
+
+		function calcFFVelocity(a,b){
+			ctx.beginPath();
+			ctx.clearRect(0,0,600,400);
+			ctx.closePath();
+			var FFVelocity = parseFloat(a) * parseFloat(b) + " m/s";
+			ctx.beginPath();
+			ctx.font="50px 'Calibri'"
+			ctx.fillText(FFVelocity,25,70);
+			ctx.closePath();
+		}
+
+		function calcFFDistance(a,b){
+			ctx.beginPath();
+			ctx.clearRect(0,0,600,400);
+			ctx.closePath();
+			var FFDistance = .5 * parseFloat(a) * parseFloat(b) * parseFloat(b) + " m";
+			ctx.beginPath();
+			ctx.font="50px 'Calibri'"
+			ctx.fillText(FFVelocity,25,70);
+			ctx.closePath();
+		}
+
+		</script>
+	</canvas>
+
+	<br>
+
+	<!-- Speed -->
+
+	<table>
+		<tr>
+			<td>Distance:</td>
+			<td><input type="number" id="speedDistance" placeholder="Distance"></td>
+		</tr>
+		<tr>
+			<td></td><td><hr></td><td>
+		</tr>
+		<tr>
+			<td>Time:</td>
+			<td><input type="number" id="speedTime" placeholder="Time"></td>
+			<td><input type="button" value="Calculate Speed" onClick="calcSpeed(speedDistance.value,speedTime.value)">
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Acceleration -->
+
+	<table>
+		<tr>
+			<td>End Velocity:</td>
+			<td><input type="number" id="accelerationV2" placeholder="End Velocity"></td>
+			<td>Start Velocity:</td>
+			<td><input type="number" id="accelerationV1" placeholder="Start Velocity"></td>
+		</tr>
+		<tr>
+			<td colspan="4"><hr></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Time:</td>
+			<td><input type="number" id="accelerationTime" placeholder="Time"></td>
+			<td></td>
+			<td><input type="button" value="Calculate Acceleration" onClick="calcAcceleration(accelerationV2.value,accelerationV1.value,accelerationTime.value)"></td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Free Fall Velocity -->
+
+	<table>
+		<tr>
+			<td>Gravity:</td>
+			<td><input type="number" id="gravityFFVelocity" placeholder="Gravity Acceleration" value="9.8"></td>
+			<td>Time:</td>
+			<td><input type="number" id="timeFFVelocity" placeholder="Time"></td>
+			<td><input type="button" value="Calculate Free Fall Velocity" onClick="calcFFVelocity(gravityFFVelocity.value,timeFFVelocity.value)"></td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Free Fall Distance -->
+
+	<table>
+		<tr>
+			<td>Gravity:</td>
+			<td><input type="number" id="gravityFFDistance" placeholder="Gravity Acceleration" value="9.8"></td>
+			<td>Time:</td>
+			<td><input type="number" id="timeFFDistance" placeholder="Time"></td>
+			<td><input type="button" value="Calculate Free Fall Distance" onClick="calcFFDistance(gravityFFDistance.value,timeFFDistance.value)"></td>
+		</tr>
+	</table>
+			
+</body>
+</html>

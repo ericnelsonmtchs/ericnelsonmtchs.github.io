@@ -1,0 +1,339 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<title>Canvas Drawing</title>
+
+</head>
+
+<body>
+	<canvas width="600" height="400" style="border:solid 1px black" id="myCanvas">
+		<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+
+		//background
+		ctx.beginPath();
+		var grd=ctx.createRadialGradient(300,200,40,300,200,200);
+		grd.addColorStop(0,"green");
+		grd.addColorStop(1,"lightblue");
+		//fill with gradient
+		ctx.fillStyle=grd;
+		ctx.fillRect(10,10,150,100);
+		ctx.rect(0,0,600,400);
+		ctx.fill();
+		ctx.closePath();
+
+		//legs
+		//leg 1
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(325,275,10,325,275,75);
+		grdRadial.addColorStop(0,'#872001');
+		grdRadial.addColorStop(1,'#C99945');
+		ctx.fillStyle = grdRadial;
+		ctx.moveTo(300,250);
+		ctx.bezierCurveTo(275,295,275,295,310,350);
+		ctx.bezierCurveTo(275,345,275,345,260,350);
+		ctx.lineTo(262,363);
+		ctx.lineTo(280,364);
+		ctx.lineTo(290,374);
+		ctx.bezierCurveTo(350,364,350,364,320,295);
+		ctx.lineTo(360,250);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.moveTo(280,364);
+		ctx.bezierCurveTo(290,355,290,355,315,357)
+		ctx.closePath();
+		//toenails
+		ctx.beginPath();
+		ctx.fillStyle="#F9FBFA";
+		ctx.moveTo(260,350);
+		ctx.lineTo(240,360);
+		ctx.lineTo(262,363)
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.moveTo(280,364);
+		ctx.lineTo(266,379);
+		ctx.lineTo(290,374);
+		ctx.fill();
+		ctx.closePath();
+
+		//leg 2
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(325,275,10,325,275,75);
+		grdRadial.addColorStop(0,'#872001');
+		grdRadial.addColorStop(1,'#C99945');
+		ctx.fillStyle = grdRadial;
+		ctx.moveTo(350,267);
+		ctx.bezierCurveTo(355,315,355,315,375,364);
+		ctx.bezierCurveTo(350,364,350,364,340,375);
+		ctx.lineTo(350,385);
+		ctx.bezierCurveTo(365,387,375,387,380,380);
+		ctx.lineTo(405,390);
+		ctx.lineTo(420,380);
+		ctx.lineTo(395,360);
+		ctx.bezierCurveTo(380,315,380,315,385,260);
+		ctx.fill();
+		ctx.closePath();
+		//toenails
+		ctx.beginPath();
+		ctx.fillStyle="#F9FBFA"
+		ctx.moveTo(340,375);
+		ctx.lineTo(327,390);
+		ctx.lineTo(350,385);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.moveTo(405,390);
+		ctx.lineTo(425,395);
+		ctx.lineTo(420,380);
+		ctx.fill();
+		ctx.closePath();
+
+
+		//red bulborb body
+		ctx.beginPath();
+		ctx.arc(350,190,80,0,2*Math.PI);
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(400,250,100,350,110,100);
+		grdRadial.addColorStop(0,'black');
+		grdRadial.addColorStop(1,'#FF1313');
+		ctx.fillStyle = grdRadial;
+		ctx.fill();
+		ctx.closePath();
+
+		//white dots
+		//middle dot
+		ctx.beginPath();
+		ctx.fillStyle="white"
+		ctx.arc(427,175,17,0.45*Math.PI,1.44*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//dot fix
+		ctx.beginPath();
+		ctx.arc(350,190,80,-.14*Math.PI,.016*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//top dot
+		ctx.beginPath();
+		ctx.arc(390,110,17,.35*Math.PI,.95*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//dot fix
+		ctx.beginPath();
+		ctx.arc(350,190,80,-.4*Math.PI,-.3*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//sad looking egg dot
+		ctx.beginPath();
+		ctx.arc(405,224,14,.67*Math.PI,1.6*Math.PI);
+		ctx.arc(399,221,15,-.15*Math.PI,.52*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//botom oval dot
+		ctx.beginPath();
+		ctx.arc(360,261,14,1.1*Math.PI,1.8*Math.PI);
+		ctx.arc(359,250,14,.1*Math.PI,.8*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+
+		//left tooth
+		ctx.beginPath();
+		ctx.fillStyle="#F9FBFA";
+		ctx.moveTo(250,217);
+		ctx.lineTo(245,240);
+		ctx.lineTo(240,217);
+		ctx.fill();
+		ctx.closePath();
+
+		//big ugly lower head
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(280,260,10,280,260,100);
+		grdRadial.addColorStop(0,'#FEFEF2');
+		grdRadial.addColorStop(1,'#FDDC73');
+		ctx.fillStyle = grdRadial;
+		ctx.moveTo(365,235);
+		ctx.bezierCurveTo(240,300,190,280,270,210);
+		ctx.fill();
+		ctx.closePath();
+		//inside mouth (TONGUE)
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(250,270,10,250,270,90);
+		grdRadial.addColorStop(0,'#3E0109');
+		grdRadial.addColorStop(1,'#F89192');
+		ctx.fillStyle = grdRadial;
+		ctx.moveTo(350,230);
+		ctx.bezierCurveTo(245,295,195,275,275,210);
+		ctx.fill();
+		ctx.closePath();
+
+		//eye 1
+		//eye pillar
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(225,75,15,225,75,75);
+		grdRadial.addColorStop(0,'#FDDC73');
+		grdRadial.addColorStop(1,'#5B3F18');
+		ctx.fillStyle = grdRadial;
+		ctx.moveTo(245,150);
+		ctx.lineTo(220,90);
+		ctx.lineTo(290,150);
+		ctx.fill();
+		ctx.closePath();
+		//eyeball
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(225,75,15,225,75,75);
+		grdRadial.addColorStop(0,'#FDDC73');
+		grdRadial.addColorStop(1,'#5B3F18');
+		ctx.fillStyle = grdRadial;
+		ctx.arc(210,95,35,0*Math.PI,2*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//white
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(225,75,15,225,75,75);
+		grdRadial.addColorStop(0,'#FCFCFC');
+		grdRadial.addColorStop(1,'#565654');
+		ctx.fillStyle = grdRadial;
+		ctx.arc(210,95,35,0.5*Math.PI,1.5*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.arc(194,95,39,-0.365*Math.PI,.37*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//purple
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(185,82,.5,185,82,30);
+		grdRadial.addColorStop(0,'#E4D0FB');
+		grdRadial.addColorStop(1,'#230155');
+		ctx.fillStyle = grdRadial;
+		ctx.arc(210,95,35,0.75*Math.PI,1.25*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.arc(149,95,43,-0.19*Math.PI,0.19*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+
+		//big ugly upper head
+		ctx.beginPath();
+		ctx.moveTo(350,110);
+		//right line
+		ctx.bezierCurveTo(380,150,400,175,365,235);
+		//bottom of upper mouth
+		ctx.bezierCurveTo(200,220,195,210,200,180);
+		//top of head
+		ctx.bezierCurveTo(200,170,260,110,350,110);
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(250,175,25,265,175,125);
+		grdRadial.addColorStop(0,'#FEFEF2');
+		grdRadial.addColorStop(1,'#FDDC73');
+		ctx.fillStyle = grdRadial;
+		ctx.fill();
+		ctx.closePath();
+
+		//right tooth
+		ctx.beginPath();
+		ctx.fillStyle="#F9FBFA";
+		ctx.moveTo(330,230);
+		ctx.lineTo(345,230);
+		ctx.lineTo(346,250);
+		ctx.lineTo(330,230);
+		ctx.fill();
+		ctx.closePath();
+
+		//eye 2
+		//eye pillar
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(308,80,15,308,80,75);
+		grdRadial.addColorStop(0,'#FDDC73');
+		grdRadial.addColorStop(1,'#5B3F18');
+		ctx.fillStyle = grdRadial;
+		ctx.moveTo(300,145);
+		ctx.lineTo(310,90);
+		ctx.lineTo(320,147);
+		ctx.fill();
+		ctx.closePath();
+		//eyeball
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(308,80,15,308,80,75);
+		grdRadial.addColorStop(0,'#FDDC73');
+		grdRadial.addColorStop(1,'#5B3F18');
+		ctx.fillStyle = grdRadial;
+		ctx.arc(293,100,35,0*Math.PI,2*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//white
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(308,80,15,308,80,75);
+		grdRadial.addColorStop(0,'#FCFCFC');
+		grdRadial.addColorStop(1,'#565654');
+		ctx.fillStyle = grdRadial;
+		ctx.arc(293,100,35,0.5*Math.PI,1.5*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.arc(277,100,39,-0.365*Math.PI,.37*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		//purple
+		ctx.beginPath();
+		//radial gradient
+		var grdRadial = ctx.createRadialGradient(268,87,.5,268,87,30);
+		grdRadial.addColorStop(0,'#E4D0FB');
+		grdRadial.addColorStop(1,'#230155');
+		ctx.fillStyle = grdRadial;
+		ctx.arc(293,100,35,0.75*Math.PI,1.25*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+		ctx.beginPath();
+		ctx.arc(232,100,43,-0.19*Math.PI,0.19*Math.PI);
+		ctx.fill();
+		ctx.closePath();
+
+		//nostril 1
+		ctx.beginPath();
+		ctx.fillStyle="black";
+		ctx.moveTo(200,180);
+		ctx.bezierCurveTo(207,180,205,190,206,185);
+		ctx.bezierCurveTo(205,199,195,200,200,180);
+		ctx.fill();
+		ctx.closePath();
+		//nostril 2
+		ctx.beginPath();
+		ctx.moveTo(216,190);
+		ctx.bezierCurveTo(220,185,235,180,243,187);
+		ctx.bezierCurveTo(245,202,215,202,216,190);
+		ctx.fill();
+		ctx.closePath();
+
+		//text
+		ctx.beginPath();
+		ctx.shadowBlur=10;
+		ctx.shadowColor="white";
+		ctx.font="30px Impact";
+		ctx.fillText("Pikmin",510,395);
+
+		ctx.shadowBlur=0;
+
+
+		</script>
+	</canvas>
+
+</body>
+</html>
